@@ -67,6 +67,8 @@ All database queries use prepared statements with controlled table access to imp
 
 
 ## Project Structure
+
+```plaintext
 football_club/
 ├── frontend/
 │   ├── index.html              # Landing page with login modals
@@ -92,7 +94,7 @@ football_club/
 │   └── delete_data.php         # Delete records
 │
 └── README.md
-
+```
 
 
 ## How to Run
