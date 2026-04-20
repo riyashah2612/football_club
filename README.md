@@ -4,15 +4,13 @@ A full-stack web application for managing football club operations such as playe
 
 The project was developed as part of a **Database Management Systems (DBMS) academic course**, in collaboration with peers, to apply practical concepts of database design and full-stack web development.
 
----
-
 ## Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript (AJAX)  
 - **Backend:** PHP (MySQLi)  
 - **Database:** MySQL  
 
----
+
 
 ## Features
 
@@ -24,7 +22,7 @@ The project was developed as part of a **Database Management Systems (DBMS) acad
 - AJAX-based communication between frontend and backend  
 - Modular backend APIs for each CRUD operation  
 
----
+
 
 ## Database Overview
 
@@ -43,7 +41,7 @@ The system is built on a relational schema with multiple interconnected tables:
 
 - Player weight validation trigger ensures minimum weight requirement
 
----
+
 
 ## Backend Structure
 
@@ -56,7 +54,7 @@ The system is built on a relational schema with multiple interconnected tables:
 
 All database queries use prepared statements with controlled table access to improve security and prevent SQL injection.
 
----
+
 
 ## Frontend Structure
 
@@ -64,37 +62,38 @@ All database queries use prepared statements with controlled table access to imp
 - Separate pages for each entity (players, coaches, matches, etc.)  
 - Employee dashboard for CRUD operations  
 - Read-only views for players and coaches  
-- Basic responsive design using CSS and JavaScript  
+- Responsive design using CSS and JavaScript  
 
----
+
 
 ## Project Structure
+football_club/
+├── frontend/
+│   ├── index.html              # Landing page with login modals
+│   ├── player-dashboard.html   # Player interface
+│   ├── coach-dashboard.html    # Coach interface
+│   ├── employee-dashboard.html # Admin CRUD interface
+│   ├── players.html            # Player directory
+│   ├── coaches.html            # Coach directory
+│   ├── employees.html          # Employee directory
+│   ├── matches.html            # Match listings
+│   ├── training.html           # Training session listings
+│   ├── venues.html             # Venue directory
+│   ├── clubs.html              # Club directory
+│   ├── styles.css              # Responsive styling
+│   └── script.js               # AJAX & DOM manipulation
+│
+├── backend/
+│   ├── db_config.php           # Database connection
+│   ├── fetch_data.php          # GET all records
+│   ├── search_data.php         # Search endpoint
+│   ├── insert_data.php         # Create records
+│   ├── update_data.php         # Update records
+│   └── delete_data.php         # Delete records
+│
+└── README.md
 
-frontend/
-index.html
-player-dashboard.html
-coach-dashboard.html
-employee-dashboard.html
-players.html
-coaches.html
-employees.html
-matches.html
-training.html
-venues.html
-clubs.html
-script.js
-styles.css
 
-backend/
-db_config.php
-fetch_data.php
-insert_data.php
-update_data.php
-delete_data.php
-search_data.php
-schema.php
-
----
 
 ## How to Run
 
@@ -106,14 +105,14 @@ schema.php
 6. Open the application in browser:
 http://localhost/football-club/frontend/index.html 
 
----
+
 
 ## Future Improvements
 - Role-based authentication system
 - Improved UI with modern frontend framework
 - Deployment on cloud platform
 
----
+
 
 ## About This Project
 
