@@ -5,7 +5,7 @@ ini_set('display_errors', 0);
 
 $host = "localhost";
 $user = "root";
-$password = "your_passowrd";
+$password = "your_password";
 $dbname = "football_club";
 
 // First, try to connect to MySQL server (without selecting database)
