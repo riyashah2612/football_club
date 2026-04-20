@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Dashboard | Football Club Management</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="employee-dashboard.html">Employee Dashboard</a></li>
+          <li><a href="employees.html">Employees</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="matches.html">Matches</a></li>
+          <li><a href="training.html">Training</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+      <header class="hero" style="margin-bottom: 2rem">
+        <span class="badge">Admin Console</span>
+        <h1>Manage Every Aspect of the Club</h1>
+        <p>
+          Create, update, search, and delete records across players, coaches, employees,
+          clubs, matches, training sessions, and venues.
+        </p>
+      </header>
+
+      <section class="card-grid" style="margin-bottom: 2rem">
+        <div class="card">
+          <h3>Centralised Control</h3>
+          <p>Use the CRUD modals to manage data for each entity instantly.</p>
+        </div>
+        <div class="card">
+          <h3>Smart Search</h3>
+          <p>Filter records locally or query the database directly.</p>
+        </div>
+        <div class="card">
+          <h3>Live Sync</h3>
+          <p>Every successful mutation automatically refreshes the table view.</p>
+        </div>
+      </section>
+
+      <section class="entity-selector">
+        <label for="entity-select">Choose an entity to manage</label>
+        <select id="entity-select" data-role="entity-selector">
+          <option value="players">Players</option>
+          <option value="coach">Coaches</option>
+          <option value="employee">Employees</option>
+          <option value="clubs">Clubs</option>
+          <option value="matches">Matches</option>
+          <option value="training_session">Training Sessions</option>
+          <option value="venue">Venues</option>
+        </select>
+      </section>
+
+      <section class="dashboard-actions">
+        <button class="btn" data-modal="insert-modal">Insert Record</button>
+        <button class="btn secondary" data-modal="update-modal">Update Record</button>
+        <button class="btn secondary" data-modal="search-modal">Search Records</button>
+        <button class="btn" data-modal="delete-modal">Delete Record</button>
+      </section>
+
+      <section class="table-wrapper">
+        <div
+          class="toolbar"
+          data-search-container
+          id="crud-search"
+          data-role="crud-search-container"
+        >
+          <div class="left">
+            <form data-role="search-form" class="grid-3" style="width: 100%">
+              <div>
+                <label for="crud-search-input">Search keyword</label>
+                <input
+                  type="text"
+                  id="crud-search-input"
+                  placeholder="Search locally or submit for database search"
+                  data-role="search-input"
+                />
+              </div>
+              <div>
+                <label for="crud-search-column">Column</label>
+                <select id="crud-search-column" data-role="column-select"></select>
+              </div>
+              <div>
+                <label for="crud-filter-select">Filter</label>
+                <select id="crud-filter-select" data-role="filter-select">
+                  <option value="">No filter</option>
+                </select>
+              </div>
+              <div>
+                <label for="crud-filter-value">Filter value</label>
+                <select id="crud-filter-value" data-role="filter-value">
+                  <option value="">All</option>
+                </select>
+              </div>
+              <div style="align-self: end">
+                <button type="submit" class="btn secondary">Search Database</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <table
+          data-table="players"
+          data-role="crud-table"
+          data-search-container="#crud-search"
+          class="active-table"
+        >
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+
+    <div id="modal-root"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
+

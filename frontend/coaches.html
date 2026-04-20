@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coaches Directory | Football Club</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="coach-dashboard.html">Coach Dashboard</a></li>
+          <li><a href="coaches.html">Coaches</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="matches.html">Matches</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+      <header class="hero" style="margin-bottom: 2rem">
+        <span class="badge">Coaches</span>
+        <h1>Coaching Staff Directory</h1>
+        <p>
+          Browse every coach registered with the club, view their contact information, and
+          identify which club they are attached to.
+        </p>
+      </header>
+
+      <section class="table-wrapper">
+        <div class="toolbar" id="coach-search" data-search-container>
+          <form data-role="search-form" class="grid-3" style="width: 100%">
+            <div>
+              <label for="coach-search-input">Search coaches</label>
+              <input
+                type="text"
+                id="coach-search-input"
+                placeholder="Type to filter locally"
+                data-role="search-input"
+              />
+            </div>
+            <div>
+              <label for="coach-column-select">Column</label>
+              <select id="coach-column-select" data-role="column-select"></select>
+            </div>
+            <div>
+              <label for="coach-filter-select">Filter by</label>
+              <select id="coach-filter-select" data-role="filter-select">
+                <option value="">No filter</option>
+              </select>
+            </div>
+            <div>
+              <label for="coach-filter-value">Filter value</label>
+              <select id="coach-filter-value" data-role="filter-value">
+                <option value="">All</option>
+              </select>
+            </div>
+            <div style="align-self: end">
+              <button type="submit" class="btn secondary">Search Database</button>
+            </div>
+          </form>
+        </div>
+        <table data-table="coach" data-search-container="#coach-search">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+
+    <div id="modal-root"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
+

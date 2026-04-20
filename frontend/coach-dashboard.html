@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coach Dashboard | Football Club</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="player-dashboard.html">Player Dashboard</a></li>
+          <li><a href="coach-dashboard.html">Coach Dashboard</a></li>
+          <li><a href="employee-dashboard.html">Employee Dashboard</a></li>
+          <li><a href="coaches.html">Coaches</a></li>
+          <li><a href="training.html">Training</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+      <header class="hero" style="margin-bottom: 2rem">
+        <span class="badge">Welcome Coach</span>
+        <h1>Organise Your Team and Sessions</h1>
+        <p>
+          Access full visibility into your players, scheduled matches, training sessions, and
+          available venues. Keep every squad prepped and ready.
+        </p>
+      </header>
+
+      <section>
+        <h2 class="section-title">Coaching Overview</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Players</h3>
+            <p>Review player profiles, positions, and club assignments.</p>
+          </div>
+          <div class="card">
+            <h3>Matches</h3>
+            <p>Track fixtures with opponent clubs and final scores.</p>
+          </div>
+          <div class="card">
+            <h3>Training</h3>
+            <p>Plan sessions with clarity on focus areas and venues.</p>
+          </div>
+          <div class="card">
+            <h3>Venues</h3>
+            <p>Pick facilities based on capacity and location.</p>
+          </div>
+          <div class="card">
+            <h3>Clubs</h3>
+            <p>Stay updated with club contacts and leadership.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="table-wrapper" style="margin-top: 3rem">
+        <div class="toolbar">
+          <div class="left">
+            <h2 class="section-title" style="margin: 0; font-size: 1.4rem">Coaching Staff</h2>
+          </div>
+          <div class="right">
+            <a class="btn secondary" href="coaches.html">View All Coaches</a>
+          </div>
+        </div>
+        <table data-table="coach">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section class="table-wrapper">
+        <div class="toolbar">
+          <div class="left">
+            <h2 class="section-title" style="margin: 0; font-size: 1.4rem">Player Directory</h2>
+          </div>
+          <div class="right">
+            <a class="btn secondary" href="players.html">Manage Players</a>
+          </div>
+        </div>
+        <table data-table="players">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section class="table-wrapper">
+        <div class="toolbar">
+          <div class="left">
+            <h2 class="section-title" style="margin: 0; font-size: 1.4rem">Match Centre</h2>
+          </div>
+          <div class="right">
+            <a class="btn secondary" href="matches.html">Go to Matches</a>
+          </div>
+        </div>
+        <table data-table="matches">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section class="table-wrapper">
+        <div class="toolbar">
+          <div class="left">
+            <h2 class="section-title" style="margin: 0; font-size: 1.4rem">Training Planner</h2>
+          </div>
+          <div class="right">
+            <a class="btn secondary" href="training.html">Training Schedule</a>
+          </div>
+        </div>
+        <table data-table="training_session">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section class="table-wrapper">
+        <div class="toolbar">
+          <div class="left">
+            <h2 class="section-title" style="margin: 0; font-size: 1.4rem">Club Directory</h2>
+          </div>
+          <div class="right">
+            <a class="btn secondary" href="clubs.html">Browse Clubs</a>
+          </div>
+        </div>
+        <table data-table="clubs">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section class="table-wrapper">
+        <div class="toolbar">
+          <div class="left">
+            <h2 class="section-title" style="margin: 0; font-size: 1.4rem">Venues</h2>
+          </div>
+          <div class="right">
+            <a class="btn secondary" href="venues.html">Venue Directory</a>
+          </div>
+        </div>
+        <table data-table="venue">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+
+    <div id="modal-root"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clubs Directory | Football Club</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="employee-dashboard.html">Employee Dashboard</a></li>
+          <li><a href="clubs.html">Clubs</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="coaches.html">Coaches</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+      <header class="hero" style="margin-bottom: 2rem">
+        <span class="badge">Clubs</span>
+        <h1>Club Directory</h1>
+        <p>
+          Review all football clubs, their home cities, leadership, and founding year. Use
+          quick search or run database queries to find clubs instantly.
+        </p>
+      </header>
+
+      <section class="table-wrapper">
+        <div class="toolbar" id="clubs-search" data-search-container>
+          <form data-role="search-form" class="grid-3" style="width: 100%">
+            <div>
+              <label for="clubs-search-input">Search clubs</label>
+              <input
+                type="text"
+                id="clubs-search-input"
+                placeholder="Type to filter locally"
+                data-role="search-input"
+              />
+            </div>
+            <div>
+              <label for="clubs-column-select">Column</label>
+              <select id="clubs-column-select" data-role="column-select"></select>
+            </div>
+            <div>
+              <label for="clubs-filter-select">Filter by</label>
+              <select id="clubs-filter-select" data-role="filter-select">
+                <option value="">No filter</option>
+              </select>
+            </div>
+            <div>
+              <label for="clubs-filter-value">Filter value</label>
+              <select id="clubs-filter-value" data-role="filter-value">
+                <option value="">All</option>
+              </select>
+            </div>
+            <div style="align-self: end">
+              <button type="submit" class="btn secondary">Search Database</button>
+            </div>
+          </form>
+        </div>
+        <table data-table="clubs" data-search-container="#clubs-search">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+
+    <div id="modal-root"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPIT Football Club | Home</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="hero">
+        <span class="badge">SPIT Football Club</span>
+        <h1>Football Club Management Portal</h1>
+        <p>
+          Keep track of clubs, players, coaching staff, employees, matches, training
+          sessions, and venues — all in one modern dashboard experience.
+        </p>
+        <p>Log in as a player, coach, or employee to manage your data.</p>
+
+        <div class="login-actions">
+          <button class="btn secondary" data-login="player">Player Login</button>
+          <button class="btn secondary" data-login="coach">Coach Login</button>
+          <button class="btn" data-login="employee">Employee Login</button>
+        </div>
+      </header>
+
+      <section class="container">
+        <h2 class="section-title">Club Overview</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Club ID</h3>
+            <p>201</p>
+          </div>
+          <div class="card">
+            <h3>Name</h3>
+            <p>SPIT Football Club</p>
+          </div>
+          <div class="card">
+            <h3>City</h3>
+            <p>Mumbai</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="modal-root">
+      <div class="modal" id="player-login">
+        <div class="modal-content">
+          <div class="modal-close" role="button" aria-label="Close">✕</div>
+          <h2>Player Login</h2>
+          <form class="login-form" data-redirect="player-dashboard.html">
+            <div class="field-group">
+              <label for="player-username">Username</label>
+              <input type="text" id="player-username" required />
+            </div>
+            <div class="field-group">
+              <label for="player-password">Password</label>
+              <input type="password" id="player-password" required />
+            </div>
+            <button type="submit" class="btn">Continue</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal" id="coach-login">
+        <div class="modal-content">
+          <div class="modal-close" role="button" aria-label="Close">✕</div>
+          <h2>Coach Login</h2>
+          <form class="login-form" data-redirect="coach-dashboard.html">
+            <div class="field-group">
+              <label for="coach-username">Username</label>
+              <input type="text" id="coach-username" required />
+            </div>
+            <div class="field-group">
+              <label for="coach-password">Password</label>
+              <input type="password" id="coach-password" required />
+            </div>
+            <button type="submit" class="btn">Continue</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal" id="employee-login">
+        <div class="modal-content">
+          <div class="modal-close" role="button" aria-label="Close">✕</div>
+          <h2>Employee Login</h2>
+          <form class="login-form" data-redirect="employee-dashboard.html">
+            <div class="field-group">
+              <label for="employee-username">Username</label>
+              <input type="text" id="employee-username" required />
+            </div>
+            <div class="field-group">
+              <label for="employee-password">Password</label>
+              <input type="password" id="employee-password" required />
+            </div>
+            <button type="submit" class="btn">Continue</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

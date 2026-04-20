@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Players Directory | Football Club</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="player-dashboard.html">Player Dashboard</a></li>
+          <li><a href="coach-dashboard.html">Coach Dashboard</a></li>
+          <li><a href="employees.html">Employees</a></li>
+          <li><a href="players.html">Players</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+      <header class="hero" style="margin-bottom: 2rem">
+        <span class="badge">Players</span>
+        <h1>Complete Player Directory</h1>
+        <p>
+          Search, filter, and review all registered players, their positions, and club
+          assignments. Use keyword search for quick lookup or run a database search for
+          precise results.
+        </p>
+      </header>
+
+      <section class="table-wrapper">
+        <div class="toolbar" id="players-search" data-search-container>
+          <form data-role="search-form" class="grid-3" style="width: 100%">
+            <div>
+              <label for="players-search-input">Search players</label>
+              <input
+                type="text"
+                id="players-search-input"
+                placeholder="Type to filter locally"
+                data-role="search-input"
+              />
+            </div>
+            <div>
+              <label for="players-column-select">Column</label>
+              <select id="players-column-select" data-role="column-select"></select>
+            </div>
+            <div>
+              <label for="players-filter-select">Filter by</label>
+              <select id="players-filter-select" data-role="filter-select">
+                <option value="">No filter</option>
+              </select>
+            </div>
+            <div>
+              <label for="players-filter-value">Filter value</label>
+              <select id="players-filter-value" data-role="filter-value">
+                <option value="">All</option>
+              </select>
+            </div>
+            <div style="align-self: end">
+              <button type="submit" class="btn secondary">Search Database</button>
+            </div>
+          </form>
+        </div>
+        <table data-table="players" data-search-container="#players-search">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+
+    <div id="modal-root"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
+

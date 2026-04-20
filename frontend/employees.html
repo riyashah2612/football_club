@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employees Directory | Football Club</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="employee-dashboard.html">Employee Dashboard</a></li>
+          <li><a href="employees.html">Employees</a></li>
+          <li><a href="clubs.html">Clubs</a></li>
+          <li><a href="venues.html">Venues</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+      <header class="hero" style="margin-bottom: 2rem">
+        <span class="badge">Employees</span>
+        <h1>Club Employees Directory</h1>
+        <p>
+          View all employees, their departmental roles, and key contact information.
+          Combine local filters with backend search to find the right person quickly.
+        </p>
+      </header>
+
+      <section class="table-wrapper">
+        <div class="toolbar" id="employee-search" data-search-container>
+          <form data-role="search-form" class="grid-3" style="width: 100%">
+            <div>
+              <label for="employee-search-input">Search employees</label>
+              <input
+                type="text"
+                id="employee-search-input"
+                placeholder="Type to filter locally"
+                data-role="search-input"
+              />
+            </div>
+            <div>
+              <label for="employee-column-select">Column</label>
+              <select id="employee-column-select" data-role="column-select"></select>
+            </div>
+            <div>
+              <label for="employee-filter-select">Filter by</label>
+              <select id="employee-filter-select" data-role="filter-select">
+                <option value="">No filter</option>
+              </select>
+            </div>
+            <div>
+              <label for="employee-filter-value">Filter value</label>
+              <select id="employee-filter-value" data-role="filter-value">
+                <option value="">All</option>
+              </select>
+            </div>
+            <div style="align-self: end">
+              <button type="submit" class="btn secondary">Search Database</button>
+            </div>
+          </form>
+        </div>
+        <table data-table="employee" data-search-container="#employee-search">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+
+    <div id="modal-root"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
