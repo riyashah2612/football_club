@@ -1,5 +1,7 @@
 # Football Club Management System
 
+Academic DBMS course project demonstrating relational database design and CRUD operations.
+
 Full-stack football club management application built using MySQL, PHP, and JavaScript. The system manages players, coaches, matches, training sessions, venues, and employees using a relational database.
 
 ## Tech Stack
